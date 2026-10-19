@@ -5,12 +5,11 @@ import { PetalBackground } from './components/PetalBackground';
 import { PhotoGallery } from './components/PhotoGallery';
 import { GiftOpeningStage } from './utils/gesture';
 import { SoundEngine } from './utils/sound';
-import { resolveMediaPath } from './utils/media';
 import { giftConfig } from './gift.config';
 import { Volume2, VolumeX, Sparkles, ChevronsDown } from 'lucide-react';
 
 if (giftConfig.music?.trim()) {
-  SoundEngine.setMusicSource(resolveMediaPath(giftConfig.music));
+  SoundEngine.setMusicSource(giftConfig.music);
 }
 
 const hasImages = giftConfig.images.some((image) =>

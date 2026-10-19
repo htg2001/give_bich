@@ -14,7 +14,7 @@ export interface GiftConfig {
   message: CardMessageData;
 }
 
-// Nhạc trong src/sound, ảnh trong src/img: import ở đầu file rồi dùng biến bên dưới; cũng nhận tên file trong public/media/ hoặc URL đầy đủ.
+// Nhạc trong src/sound, ảnh trong src/img: import ở đầu file rồi dùng biến bên dưới; cũng nhận URL đầy đủ.
 export const giftConfig: GiftConfig = {
   // Để trống thì dùng giai điệu hộp nhạc tự tạo bằng Web Audio.
   music: backgroundMusic,

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Camera } from 'lucide-react';
 import type { GiftImage } from '../gift.config';
-import { resolveMediaPath } from '../utils/media';
 
 interface PhotoGalleryProps {
   id?: string;
@@ -45,12 +44,12 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ id, images }) => {
             }`}
           >
             <img
-              src={resolveMediaPath(photo.src)}
+              src={photo.src}
               alt={photo.caption ?? `Ảnh ${index + 1}`}
               loading="lazy"
               className="w-full h-auto rounded-sm block"
               onError={() => {
-                console.warn(`Không tải được ảnh: ${resolveMediaPath(photo.src)}`);
+                console.warn(`Không tải được ảnh: ${photo.src}`);
                 setFailedSources((previous) => [...previous, photo.src]);
               }}
             />

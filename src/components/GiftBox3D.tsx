@@ -203,7 +203,6 @@ export const GiftBox3D: React.FC<GiftBox3DProps> = ({ stage, onOpen }) => {
           tabIndex={0}
           aria-label="Hộp quà 3D có thể xoay 360 độ. Nhấn 2 lần để mở."
           data-testid="gift-box-3d"
-          onClick={handlePointerUp}
           onDoubleClick={triggerOpen}
           className={`preserve-3d relative w-[210px] h-[155px] transition-transform ${
             nudging ? 'box-nudge' : ''

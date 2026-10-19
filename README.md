@@ -1,21 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/5256e37e-1973-4008-8dc2-12c2c16945ad
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
 # give_bich
+
+Trang quà tặng 20/10: hộp quà 3D chạm 2 lần để mở, thiệp chúc, ảnh và nhạc nền.
+
+## Chạy ở máy
+
+```bash
+npm install
+npm run dev   # http://localhost:3000, thêm ?autostart=1 để vào thẳng thiệp
+```
+
+## Sửa nội dung
+
+Tất cả nằm trong `src/gift.config.ts`:
+
+- `message`: lời chúc trên thiệp.
+- `images`: ảnh đặt trong `src/img/`, import ở đầu file rồi thêm vào mảng; mảng rỗng thì không hiện phần ảnh.
+- `music`: nhạc nền đặt trong `src/sound/`; để trống thì dùng giai điệu hộp nhạc tự tạo.
+
+## Deploy
+
+Push lên nhánh `main` là GitHub Actions tự build và đưa lên GitHub Pages (Settings → Pages → Source: GitHub Actions).
