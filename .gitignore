@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Ảnh chụp tạm của Google AI Studio, không cần đưa lên repo
+.aistudio/

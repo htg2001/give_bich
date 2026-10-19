@@ -1,0 +1,6 @@
+{
+  "name": "Hộp Quà 3D & Thiệp Yêu Thương",
+  "description": "Trải nghiệm mở hộp quà 3D tương tác với nơ tháo rời, mở nắp và thiệp chúc mừng lãng mạn.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
